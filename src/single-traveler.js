@@ -1,5 +1,6 @@
 class Traveler {
   constructor (trips, pendingTrips){
+    this.travelerData
     this.trips
     this.pendingTrips
   }
@@ -34,3 +35,5 @@ class Traveler {
     // Return estimated cost with 10% travel agent fee
   }
 }
+
+export default Traveler

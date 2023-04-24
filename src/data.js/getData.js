@@ -1,3 +1,8 @@
+const travelersUrl = 'http://localhost:3001/api/v1/travelers'
+const singleTravelerUrl = 'http://localhost:3001/api/v1/travelers/2'
+const tripsUrl = 'http://localhost:3001/api/v1/trips'
+const destinationsUrl = 'http://localhost:3001/api/v1/destinations'
+
 const fetchData = (url) => {
   return fetch(url)
   .then(response => response.json())
@@ -5,12 +10,13 @@ const fetchData = (url) => {
   
   const fetchAll = () => {
     return Promise.all([
-    fetchData('http://localhost:3001/api/v1/travelers'),
-    fetchData('http://localhost:3001/api/v1/travelers/<id> where<id> will be a number of a traveler’s id'),
-    fetchData('http://localhost:3001/api/v1/trips	'),
-    fetchData('http://localhost:3001/api/v1/destinations'),
+    fetchData(travelersUrl),
+    fetchData(singleTravelerUrl),
+    fetchData(tripsUrl),
+    fetchData(destinationsUrl),
     ]);
   } 
+  
 // : 
 // Array(4)
 // 0

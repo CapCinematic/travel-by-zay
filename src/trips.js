@@ -28,7 +28,7 @@ class Trips {
   }
 
   addActivity(){
-
+    
   }
 
   calculateTotalCost(){

@@ -1,4 +1,5 @@
 
+
 class Traveler {
   constructor (travelersId, name, travelType){
     this.singleTraveler = [
@@ -8,6 +9,11 @@ class Traveler {
     ]
     this.trips = []
     this.pendingTrips = []
+  }
+
+  findTraveler(travelersIdNum){
+   const foundId = this.singleTraveler.find(traveler => traveler.id === travelersIdNum)
+   return foundId
   }
 
   calculateTotalSpent(){
@@ -20,7 +26,6 @@ class Traveler {
     // const estimatedCost = this.calculateEstimatedCost();
 
     const newTrip = {
-      
       destination: destination,
       date: date,
       duration: duration,
@@ -38,5 +43,6 @@ class Traveler {
   }
  
 }
+
 
 export default Traveler

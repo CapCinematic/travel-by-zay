@@ -1,5 +1,5 @@
 const fetchData = (dataSet) => {
-  return fetch(`'http://localhost:3001/api/v1/${dataSet}`)
+  return fetch(`http://localhost:3001/api/v1/${dataSet}`)
   .then(response => {
     if(response.ok){
       return response.json()
@@ -9,13 +9,14 @@ const fetchData = (dataSet) => {
   }).catch(error => console.log(error))
   };
   
-  const fetchAll = () => {
-    return Promise.all([
+  let fetchAll = Promise.all([
     fetchData('travelers'),
     fetchData('travelers/1'),
     fetchData('trips'),
     fetchData('destinations'),
     ]);
-  } 
+
+
+  
 
   export {fetchAll, fetchData}

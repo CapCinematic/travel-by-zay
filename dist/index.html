@@ -7,8 +7,8 @@
   <title>Webpack Starter Kit</title>
 </head>
 <body>
-  <section>
-    <table>
+  <section class="section">
+    <table class="table">
       <colgroup>
         <col span="3" style="background-color: bisque;">
         <col style="background-color: aliceblue;">
@@ -27,19 +27,29 @@
       </colgroup>
     </table> 
   </section>
-  <section>
-    <form>
-      <fieldset>
+  <aside class="aside">
+    <h1 class="greeting">Welcome User</h1>
+    <div class="traveler-info"></div>
+  </aside>
+  <section class="section">
+    <form class="form">
+      <fieldset class="fieldset">
        <legend>Information:</legend>
        First Name:<br>
        <input type="text" name="firstname" value="" placeholder="First Name"><br>
        Last Name:<br>
        <input type="text" name="lastname" value="" placeholder="Last Name"><br>
        <select>
-        <option>Date</option>
-        <option>Duration</option>
-        <option>Number Of Travelers</option>
-        <option>List of Destinations</option>
+        <option value="" placeholder="Select Date">Date</option>
+       </select>
+       <select>
+        <option value="" placeholder="How long">Duration</option>
+       </select>
+       <select>
+        <option value="" placeholder="How Many Travelers?">Number Of Travelers</option>
+       </select>
+       <select>
+        <option value="" placeholder="Choose Destinations">List of Destinations</option>
        </select>
       </fieldset>
     </form>

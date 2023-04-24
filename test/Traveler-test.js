@@ -1,21 +1,21 @@
 import chai from 'chai';
 const expect = chai.expect;
 import Traveler from '../src/single-traveler';
-
+import { getTraveler } from '../src/data.js/getData';
 describe('Traveler', () => {
   let traveler;
 
   beforeEach(() => {
-    traveler = new Traveler(1, 'John Smith', 'business')
+    traveler = new Traveler({id: getTraveler.id, name: getTraveler.name, travelType: getTraveler.travelType})
   });
   it('should be a function', function () {
     expect(Traveler).to.be.a('function');
   });
 
-  it('should have a single traveler array', () => {
-    expect(traveler.singleTraveler).to.deep.equal([
+  it('should have a single traveler object', () => {
+    expect(traveler.singleTraveler).to.deep.equal(
       { id: 1, name: 'John Smith', travelType: 'business' }
-    ]);
+    );
   })
 
   it('should have default values for trips and pendingTrips', () => {

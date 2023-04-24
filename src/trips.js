@@ -1,43 +1,16 @@
-// date
-// "2022/09/16"
-// destinationID
-// 49
-// duration
-// 8
-// id
-// 1
-// status
-// "approved"
-// suggestedActivities
-// []
-// travelers
-// 1
-// userID
-// 44
+
+import { getTraveler, getTrip, getDestination } from "./data.js/getData"
 
 class Trips {
-  constructor(date, destinationId, duration, tripId, status, numTravelers, travelerId){
-    this.date = date
-    this.destinationId = destinationId
-    this.duration = duration
-    this.tripId = tripId
-    this.status = status
-    this.activities = []
-    this.numTravelers = numTravelers
-    this.travelerId = travelerId
+  constructor(tripsObjOfArrays){
+    this.trips = tripsObjOfArrays
   }
 
-  addActivity(){
-    
+  getTripsByTraveler(traveler){
+    return this.trips.find(trip => trip.id === traveler.id)
   }
 
-  calculateTotalCost(){
-    
-  }
-
-  getTripDetails(){
-    return this.trips
-  }
-
- 
+  
 }
+
+export {Trips}
